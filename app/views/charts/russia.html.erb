@@ -1,0 +1,43 @@
+<ul class="nav nav-pills">
+
+<li><%= link_to "France", charts_france_path %></li>
+<li><%= link_to "UK", charts_uk_path %></li>
+<li><%= link_to "Germany", charts_germany_path %></li>
+<li class="active"><%= link_to "Russia", charts_russia_path %></li>
+</ul>
+
+
+
+<div class="row">
+	<div class="span3">
+  		<table class="table table-bordered">
+			<% @charts_ru_free_app.each do |company| %>
+			<tr>
+				<td><%= company %></td>
+			<tr>	
+			<% end %>
+		</table>
+  	</div>
+
+  	<div class="span3">
+  		<table class="table table-bordered">
+			<% @charts_ru_grossing_app.each do |company| %>
+			<tr>
+				<td><%= company %></td>
+			<tr>	
+			<% end %>
+		</table>
+  	</div>
+
+
+  	<div class="span3">
+  		<table class="table table-bordered">
+			<% @charts_ru_ipad_free_app.each do |company| %>
+			<tr>
+				<td><%= company %></td>
+			<tr>	
+			<% end %>
+		</table>
+  	</div>
+
+</div>
