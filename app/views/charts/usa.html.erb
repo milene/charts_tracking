@@ -1,9 +1,9 @@
 <ul class="nav nav-pills">
 
-<li><%= link_to "USA", charts_usa_path %></li>
+<li class="active"><%= link_to "USA", charts_usa_path %></li>
 <li><%= link_to "France", charts_france_path %></li>
 <li><%= link_to "UK", charts_uk_path %></li>
-<li class="active"><%= link_to "Germany", charts_germany_path %></li>
+<li><%= link_to "Germany", charts_germany_path %></li>
 <li><%= link_to "Russia", charts_russia_path %></li>
 <li><%= link_to "Spain", charts_spain_path %></li>
 <li><%= link_to "Italy", charts_italy_path %></li>
@@ -15,7 +15,7 @@
 <div class="row">
 	<div class="span3">
   		<table class="table table-bordered">
-			<% @charts_de_free_app.each do |company| %>
+			<% @charts_us_free_app.each do |company| %>
 			<tr>
 				<td><%= company %></td>
 			<tr>	
@@ -25,7 +25,7 @@
 
   	<div class="span3">
   		<table class="table table-bordered">
-			<% @charts_de_grossing_app.each do |company| %>
+			<% @charts_us_grossing_app.each do |company| %>
 			<tr>
 				<td><%= company %></td>
 			<tr>	
@@ -36,7 +36,7 @@
 
   	<div class="span3">
   		<table class="table table-bordered">
-			<% @charts_de_ipad_free_app.each do |company| %>
+			<% @charts_us_ipad_free_app.each do |company| %>
 			<tr>
 				<td><%= company %></td>
 			<tr>	

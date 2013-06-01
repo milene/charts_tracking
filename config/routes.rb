@@ -3,10 +3,15 @@ ChartsDeployed::Application.routes.draw do
   root :to => 'charts#index'
 
   get "charts/index"
+
+  get "charts/usa"
   get "charts/france"
-  get "charts/russia"
-  get "charts/germany"
   get "charts/uk"
+  get "charts/germany"
+  get "charts/russia"
+  get "charts/spain"
+  get "charts/italy"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
