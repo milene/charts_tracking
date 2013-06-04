@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
   <title>TopCharts</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
+
 <body>
 
 <div class="navbar">
@@ -17,8 +20,11 @@
   </div>
 </div>
 
+<div class="container">
 
-<%= yield %>
+    <%= yield %>
+
+</div>
 
 </body>
 </html>

@@ -15,7 +15,9 @@ module ChartsHelper
     	# hash = Hash.from_xml(doc.to_s))
 
 		# return doc.search('//im:artist', 'im' => "http://itunes.apple.com/rss").map{ |n| n.text }
-		return doc.search('title').map{ |n| n.text }
+		return doc.search("//im:artist", {"im" => "http://itunes.apple.com/rss"}).map{ |n| n.text }
+
+    # doc.xpath("//im:artist", {"im" => "http://itunes.apple.com/rss"})
 		
   	end
 
