@@ -5,25 +5,23 @@
 <li><%= link_to "UK", charts_uk_path %></li>
 <li><%= link_to "Germany", charts_germany_path %></li>
 <li><%= link_to "Russia", charts_russia_path %></li>
-<li  class="active"><%= link_to "Spain", charts_spain_path %></li>
+<li class="active"><%= link_to "Spain", charts_spain_path %></li>
 <li><%= link_to "Italy", charts_italy_path %></li>
 
 </ul>
 
-
-
-
-
 <div class="row">
+
 	<div class="span3">
   		<table class="table table-bordered">
   			<tr>
   				<th>Top free apps iPhone</th>
   			</tr>
-			<% @charts_es_free_app.each do |company| %>
-			<tr>
-				<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%></td>
-			<tr>	
+			<% retrieve_charts_companies("es", "free").each do |company, application| %>
+				<tr>
+					<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%>
+						<br><%= application %></td>
+				<tr>	
 			<% end %>
 		</table>
   	</div>
@@ -33,10 +31,11 @@
   			<tr>
   				<th>Top grossing apps iPhone</th>
   			</tr>
-			<% @charts_es_grossing_app.each do |company| %>
-			<tr>
-				<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%></td>
-			<tr>	
+			<% retrieve_charts_companies("es", "grossing").each do |company, application| %>
+				<tr>
+					<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%>
+						<br><%= application %></td>
+				<tr>	
 			<% end %>
 		</table>
   	</div>
@@ -47,10 +46,11 @@
   			<tr>
   				<th>Top free apps iPad</th>
   			</tr>
-			<% @charts_es_ipad_free_app.each do |company| %>
-			<tr>
-				<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%></td>
-			<tr>	
+			<% retrieve_charts_companies("es", "freeipad").each do |company, application| %>
+				<tr>
+					<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%>
+						<br><%= application %></td>
+				<tr>	
 			<% end %>
 		</table>
   	</div>
@@ -60,10 +60,11 @@
   			<tr>
   				<th>Top grossing apps iPad</th>
   			</tr>
-			<% @charts_es_ipad_grossing_app.each do |company| %>
-			<tr>
-				<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%></td>
-			<tr>	
+			<% retrieve_charts_companies("es", "grossingipad").each do |company, application| %>
+				<tr>
+					<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%>
+						<br><%= application %></td>
+				<tr>	
 			<% end %>
 		</table>
   	</div>

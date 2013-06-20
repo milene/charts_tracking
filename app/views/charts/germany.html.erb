@@ -10,18 +10,18 @@
 
 </ul>
 
-
-
 <div class="row">
+
 	<div class="span3">
   		<table class="table table-bordered">
   			<tr>
   				<th>Top free apps iPhone</th>
   			</tr>
-			<% @charts_de_free_app.each do |company| %>
-			<tr>
-				<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%></td>
-			<tr>	
+			<% retrieve_charts_companies("de", "free").each do |company, application| %>
+				<tr>
+					<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%>
+						<br><%= application %></td>
+				<tr>	
 			<% end %>
 		</table>
   	</div>
@@ -31,10 +31,11 @@
   			<tr>
   				<th>Top grossing apps iPhone</th>
   			</tr>
-			<% @charts_de_grossing_app.each do |company| %>
-			<tr>
-				<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%></td>
-			<tr>	
+			<% retrieve_charts_companies("de", "grossing").each do |company, application| %>
+				<tr>
+					<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%>
+						<br><%= application %></td>
+				<tr>	
 			<% end %>
 		</table>
   	</div>
@@ -45,10 +46,11 @@
   			<tr>
   				<th>Top free apps iPad</th>
   			</tr>
-			<% @charts_de_ipad_free_app.each do |company| %>
-			<tr>
-				<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%></td>
-			<tr>	
+			<% retrieve_charts_companies("de", "freeipad").each do |company, application| %>
+				<tr>
+					<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%>
+						<br><%= application %></td>
+				<tr>	
 			<% end %>
 		</table>
   	</div>
@@ -58,10 +60,11 @@
   			<tr>
   				<th>Top grossing apps iPad</th>
   			</tr>
-			<% @charts_de_ipad_grossing_app.each do |company| %>
-			<tr>
-				<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%></td>
-			<tr>	
+			<% retrieve_charts_companies("de", "grossingipad").each do |company, application| %>
+				<tr>
+					<td><%= link_to company, "https://na9.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=005&sen=00Q&sen=001&sen=003&str="+company%>
+						<br><%= application %></td>
+				<tr>	
 			<% end %>
 		</table>
   	</div>
